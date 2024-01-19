@@ -16,7 +16,7 @@ let newyorkTime = newyorkElement.querySelector(".time");
 newyorkTime.innerHTML = moment().tz("America/New_York").format("HH:mm:ss [<span>]A[</span]");
 
 //Addis Abeba
-let addisElement = document.querySelector('#addis-abeba');
+let addisElement = document.querySelector('#addis-ababa');
 let addisDate = addisElement.querySelector(".date");
 addisDate.innerHTML = moment().tz("Africa/Addis_Ababa").format("MMMM Do YYYY");
 let addisTime = addisElement.querySelector(".time");
@@ -30,7 +30,13 @@ setInterval(updateCurrentTime)
 function updateCity (event) {
 
     let city = document.querySelector("#city");
-    let cityName = event.target.value.replace("_", " ").split("/")[1];
+    let timeZone = event.target.value;
+    if (timeZone === 'current-location') {
+        timeZone = moment.tz.guess();
+    }
+
+
+    let cityName = timeZone.replace("_", " ").split("/")[1];
     cityTime = moment().tz(cityName).format("HH:mm:ss [<span>]A[</span>]");
     cityDate = moment.tz(cityName).format("MMMM Do YYYY");
     city.innerHTML = ` <div class="city" id="london">
