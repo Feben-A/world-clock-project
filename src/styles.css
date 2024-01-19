@@ -1,5 +1,7 @@
 
+body {
 
+}
 .container {
 display: block;
 margin: 40px auto;
@@ -8,7 +10,7 @@ max-width: 590px;
 border: 1.5px solid rgba(0,0,0,0.1);
 margin-bottom: 25px;
 border-radius: 4px;
- box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 h1 {
@@ -17,21 +19,22 @@ h1 {
 }
 
 select {
-    width: 560px;
+    width: 543px;
     padding: 7px;
     display: block;
     margin: 20px auto;
     color: rgba(0,0,0, 0.7);
-    border-radius: 2px;
+    border-radius: 1px;
 
 }
 
 .city {
     display: flex;
     justify-content:space-between;
-    font-size: 34px;
-    padding: 10px 20px;
+    font-size: 32px;
+    padding: 23px 30px;
     border-bottom: 1px dotted rgba(26, 13, 13, 0.6);
+    
 }
 
 .city:last-child {
@@ -45,7 +48,7 @@ select {
 }
 
 .time {
-   font-size: 42px; 
+   font-size: 45px; 
    vertical-align: middle;
 }
 

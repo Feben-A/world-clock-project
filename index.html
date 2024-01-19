@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.44/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -12,20 +14,40 @@
 
       <select>
         <option value="">Choose city</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Africa/Addis_Ababa">Addis Abeba</option>
       </select>
 
-      <div class="city">
-        <div>
-          London
-          <div class="date">August 15th 2022</div>
+      <div id="city">
+        <div class="city" id="london">
+          <div>
+            <div id="city-name">London</div>
+            <div class="date">August 15th 2022</div>
+          </div>
+          <div class="time">1:48:15 <span>AM</span></div>
         </div>
-        <div class="time">1:48:15 <span>AM</span></div>
+
+        <div class="city" id="new-york">
+          <div>
+            <div class="city-name">New York</div>
+            <div class="date">August 15th 2022</div>
+          </div>
+          <div class="time">1:48:15 <span>AM</span></div>
+        </div>
+        <div class="city" id="addis-abeba">
+          <div>
+            <div class="city-name">Addis Abeba</div>
+            <div class="date">August 15th 2022</div>
+          </div>
+          <div class="time">1:48:15 <span>AM</span></div>
+        </div>
       </div>
     </div>
+
     <footer>
       This project was coded by
-      <a href="https://github.com/Feben-A" target="_blank">Feben</a> and is
-      <a href="#">open-sourced on Github</a> and
+      <strong>Feben</strong> and is <a href="#">open-sourced on Github</a> and
       <a href="#">hosted on Netlify.</a>
     </footer>
     <script src="src/index.js"></script>
